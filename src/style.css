@@ -1,0 +1,236 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Inter;
+}
+body{
+    font-size: 22px;
+}
+.container {
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:rgb(249, 249, 249);
+    padding: 20px;
+}
+ /* .l-side{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}  */
+
+    .login-form {
+        width: 100%;
+        max-width: 620px;
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 6px 16px rgb(102 97 97 / 8%);
+        padding: 30px;
+    }
+
+.register-form{
+    width: 100%;
+        max-width: 620px;
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 6px 16px rgb(102 97 97 / 8%);
+        padding: 30px;
+}
+
+.register-form h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #000000;
+    font-weight: 500;
+    font-size: xx-large;
+    margin-top: 12px;
+}
+
+.register-button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 20px;
+    margin-left: 220px;
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #000000;
+    font-weight: 500;
+    font-size: xx-large;
+    margin-top: 12px;
+}
+/* .login-form > span{
+    background-color:rgb(255, 255, 255);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 14px;
+    margin: 10px 0;
+}
+.login-form > span > input{
+    background-color:rgb(255, 255, 255);
+    border: none;
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    color: #1C1C1C;
+    font-weight: 500;
+    margin-left: 10px;
+    outline: none;
+}
+.login-form > span > input:focus::placeholder {
+    color: transparent;
+  }
+.login-form > span > input::placeholder{
+    color: #383737;
+    font-weight: 500;
+    
+} */
+.login-button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 20px;
+    margin-left: 220px;
+}
+
+.login-button hover{
+    background-color: #333333;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color:rgb(15, 12, 12);
+}
+
+.form-group input {
+    padding: 12px 16px;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.box{
+    width: 412px;
+    height: 524px;
+    border-radius: 46px;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    background-color: rgba(255, 255, 255, 0.274);
+    backdrop-filter: blur(13.6px);
+    z-index: 2;
+}
+.box > h2{
+    color: #fff;
+    width: 260px;
+    padding: 20px 40px;
+    line-height: 50px;
+    font-weight: 600;
+   
+}
+.box > img{
+    position: absolute;
+    bottom: 0;
+    right: -55px;
+    width: 700px;
+}
+.layer{
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    background-color: #ffffff38;
+    z-index: 1;
+}
+@media screen and (max-width: 1048px) {
+    .box > img{
+        right: -10px;
+        width: 550px;
+    }
+}
+@media screen and (max-width: 860px) and (max-height: 1024px) {
+    .r-side{
+        display: none;
+    }
+    .container{
+        justify-content: center;
+        align-items: center;
+    }
+}
+.light{
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 100px;
+    left: -40px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.light > img{
+    width: 50px;
+    transition: .2s;
+}
+.light > img:hover{
+    width: 60px;
+}
+.message {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 10px;
+    min-height: 20px; /* so space is always reserved */
+  }
+  
+  .message.success {
+    color: green;
+  }
+  
+  .message.error {
+    color: #FF3333;
+  }
+  /* .goai-logo-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+   */
+  .goai-logo-side img.goai-logo {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; /* prevents the bottom whitespace from inline images */
+
+  }
+
+.text-center a {
+    color: #ff0023;
+}

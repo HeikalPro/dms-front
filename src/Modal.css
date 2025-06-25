@@ -1,0 +1,197 @@
+/************************************************************
+ * 1) THEME VARIABLES & GLOBAL STYLES
+ ************************************************************/
+ :root {
+  --primary-bg: #fff;
+  --secondary-bg: #f8f9fa;
+  --accent-bg: #007bff;        /* Blue for buttons */
+  --light-text: #888;
+  --text-color: #333;
+  --border-color: #ddd;
+  --scrollbar-thumb: #ccc;
+  --selection-bg: #d3d3d3;     /* Light gray for selection */
+  
+  /* Spacing scale */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f9f9f9;
+}
+
+/************************************************************
+ * 2) MODAL OVERLAY & CONTENT
+ ************************************************************/
+ .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Black overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000 !important; /* Ensure it stays on top */
+}
+
+.modal {
+  background: #FFFFFF; /* White background */
+  width: 60%; /* Increased from 50% to 60% for a larger modal */
+  max-width: 800px; /* Increased from 600px to 800px for a larger max width */
+  padding: 32px; /* Increased from 24px to 32px for more internal space */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  position: relative; /* Ensure proper layering */
+}
+
+.modal h2 {
+  font-size: 1.75rem; /* Increased from 1.5rem for a larger title */
+  font-weight: 700;
+  margin-bottom: 20px; /* Increased from 16px for more spacing */
+  color: #000000; /* Black text */
+}
+
+.modal-body input,
+.modal-body textarea {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px; /* Increased from 16px for more spacing */
+  padding: 12px; /* Increased from 8px for larger inputs */
+  font-size: 1.1rem; /* Increased from 1rem for larger text */
+  border: 2px solid #D3D3D3; /* Light grey border */
+  border-radius: 8px; /* Increased from 6px for larger corners */
+  box-sizing: border-box;
+}
+
+.modal-body textarea {
+  min-height: 200px; /* Increased from 120px for a larger textarea */
+  resize: vertical;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px; /* Increased from 24px for more spacing */
+}
+
+.cancel-btn,
+.confirm-btn {
+  width: 48%;
+  padding: 12px; /* Increased from 8px for larger buttons */
+  font-size: 1.1rem; /* Increased from 1rem for larger text */
+  font-weight: 600;
+  border-radius: 8px; /* Increased from 6px for larger corners */
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.cancel-btn {
+  background: #D3D3D3; /* Light grey */
+  color: #000000; /* Black text */
+  border: none;
+}
+
+.cancel-btn:hover {
+  background: #C0C0C0; /* Darker grey */
+  transform: scale(1.03);
+}
+
+.confirm-btn {
+  background: #FF0000; /* Red */
+  color: #FFFFFF; /* White text */
+  border: none;
+}
+
+.confirm-btn:hover {
+  background: #E60000; /* Darker red */
+  transform: scale(1.03);
+}
+
+/************************************************************
+ * 3) MODAL TITLE & CLOSE BUTTON
+ ************************************************************/
+.modal-content h3 {
+  font-size: 1 rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-color);
+}
+
+.modal-close {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  background: transparent;
+  border: none;
+  font-size: 1 rem;
+  cursor: pointer;
+}
+
+/************************************************************
+ * 4) INPUTS & TEXTAREA STYLES
+ ************************************************************/
+.edit-input,
+.edit-textarea {
+  width: 100%;
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  font-size: 1 rem;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.edit-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/************************************************************
+ * 5) MODAL ACTION BUTTONS
+ ************************************************************/
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing-lg);
+}
+
+.save-button,
+.cancel-button {
+  width: 48%;
+  padding: var(--spacing-sm);
+  font-size: 1 rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, transform 0.2s;
+  color: var(--primary-bg);
+  background: var(--accent-bg);
+}
+
+.save-button:hover,
+.cancel-button:hover {
+  background: #0056b3;
+  transform: scale(1.03);
+}
+
+.save-button:active,
+.cancel-button:active {
+  transform: scale(0.97);
+}

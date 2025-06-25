@@ -1,0 +1,45 @@
+/* Attach File Button */
+.attach-file-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  background-color: var(--primary-bg); /* Blue background */
+  color: #fff;
+  border: none;
+  border-radius: 30px; /* Rounded corners for a sleek look */
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.attach-file-btn:hover {
+  background-color: var(--primary-bg-hover); /* Slightly darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.attach-file-btn:active {
+  background-color: var(--primary-bg-active); /* Darker shade for active state */
+  transform: translateY(1px); /* Pressed effect */
+}
+
+.attach-file-btn .file-icon {
+  margin-right: 8px; /* Space between icon and text */
+  font-size: 20px; /* Icon size */
+  transition: transform 0.2s ease;
+}
+
+.attach-file-btn .file-icon:hover {
+  transform: rotate(15deg); /* Slight rotation effect on hover */
+}
+
+.attach-file-btn span {
+  font-weight: 500;
+}
+
+/* Optional: Focus state for accessibility */
+.attach-file-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 120, 255, 0.2); /* Soft focus ring */
+}
